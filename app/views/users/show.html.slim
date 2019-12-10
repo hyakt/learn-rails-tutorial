@@ -1,5 +1,7 @@
-h1 = @user.name
-div = @user.email
-div = @user.created_at
-div = @user.updated_at
-div = Time.now
+= provide(:title, @user.name)
+div.row
+  aside.col-md-4
+    section.user_info
+      h1
+        = gravatar_for @user
+        = @user.name
